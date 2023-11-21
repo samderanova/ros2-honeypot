@@ -1,0 +1,16 @@
+services:
+  talker:
+    build:
+      context: .
+      dockerfile: talker.Dockerfile
+    command: ros2 run demo_nodes_cpp talker
+    ports:
+      - "7400:7400"
+
+  listener:
+    build:
+      context: .
+      dockerfile: listener.Dockerfile
+    command: ros2 run demo_nodes_cpp listener
+    ports:
+      - "7401:7401"
