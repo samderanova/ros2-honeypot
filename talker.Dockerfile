@@ -9,4 +9,4 @@ RUN apt-get update && apt-get install -y \
 
 # launch ros package
 
-CMD ["ros2", "launch", "demo_nodes_cpp", "talker"]
+CMD ["ros2", "launch", "demo_nodes_cpp", "talker", "2>/dev/null"]
